@@ -16,7 +16,7 @@ const ItemGrid = ({ items }) => {
             src={`${item.image.asset.url}?w=500&h=400&fit=crop`}
             alt={item.name}
             style={{
-              background: `url(${item.image.asset.metadata.lqip}) `,
+              background: `url(${item.image.asset.metadata.lqip})`,
               backgroundSize: 'cover',
             }}
           />

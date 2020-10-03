@@ -5,6 +5,10 @@ const S = {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    h2 {
+      font-size: 3rem;
+      font-size: clamp(2.5rem, 4vw, 3rem);
+    }
     fieldset {
       grid-column: span 2;
       max-height: 600px;
@@ -16,6 +20,9 @@ const S = {
       &.menu {
         grid-column: span 1;
       }
+    }
+    input {
+      width: 100%;
     }
     .bakeBeans {
       display: none;
@@ -59,6 +66,22 @@ const S = {
       top: 0;
       right: 0;
       box-shadow: none;
+    }
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr;
+      h2 {
+        margin-top: 1rem;
+      }
+      button {
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+    @media (max-width: 400px) {
+      .button-grid {
+        border-bottom: 2px solid var(--grey);
+        margin-bottom: 1rem;
+      }
     }
   `,
 };

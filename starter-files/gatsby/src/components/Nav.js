@@ -14,7 +14,7 @@ const Nav = () => {
         <li>
           <Link to="/pizzas">Pizza Menu</Link>
         </li>
-        <li>
+        <li className="logo-item">
           <Link to="/">
             <Logo />
           </Link>
@@ -61,6 +61,7 @@ const S = {
       }
       a {
         font-size: 3rem;
+        font-size: clamp(2.5rem, 3.3vw, 3.3rem);
         text-decoration: none;
         &:hover {
           color: var(--red);
@@ -68,7 +69,35 @@ const S = {
         &[aria-current='page'] {
           color: var(--red);
         }
+        @media (max-width: 700px) {
+          font-size: 2.5rem;
+          font-size: clamp(1.8rem, 8vw, 2.5rem);
+        }
+        @media (max-width: 500px) {
+          font-size: clamp(1.7rem, 5vw, 2.5rem);
+        }
       }
+    }
+    @media (max-width: 600px) {
+      --columns: 4;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--grey);
+      padding-bottom: 3rem;
+      ul {
+        grid-template-rows: 8rem auto;
+        grid-template-columns: repeat(var(--columns), 1fr);
+        justify-items: center;
+      }
+      .logo-item {
+        order: 0;
+        grid-column: 1 / -1;
+      }
+      .logo {
+        transform: translateY(-15%);
+      }
+    }
+    @media (max-width: 500px) {
+      --columns: 2;
     }
   `,
 };

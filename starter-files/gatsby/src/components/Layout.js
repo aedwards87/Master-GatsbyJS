@@ -32,6 +32,7 @@ const S = {
   `,
   SiteBorder: styled.div`
     max-width: 1000px;
+    min-width: 260px;
     margin: 12rem auto 4rem auto;
     margin-top: clamp(2rem, 10vw, 12rem);
     background: white url(${stripes});

@@ -8,7 +8,6 @@ import SEO from '../components/SEO';
 
 const SlicemastersPage = ({ data, pageContext }) => {
   const sliceMasters = data.sliceMaster.nodes;
-  console.log(sliceMasters);
   return (
     <>
       <SEO title={`Slicemasters - Page ${pageContext.currentPage || 1}`} />

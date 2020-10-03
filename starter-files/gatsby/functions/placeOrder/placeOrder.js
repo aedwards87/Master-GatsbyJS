@@ -63,7 +63,6 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ message: `Bibbidi-Bobbidi-Boo` }),
     };
   }
-  console.log(body);
   // validate the data coming in is correct
   const requiredFields = ['email', 'name', 'order'];
   for (const field of requiredFields) {
@@ -96,7 +95,6 @@ exports.handler = async (event, context) => {
     subject: 'New order',
     html: generateOrderEmail({ order: body.order, total: body.total }),
   });
-  console.log(info);
   return {
     statusCode: 200,
     body: JSON.stringify({ message: 'Success' }),

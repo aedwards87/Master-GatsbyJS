@@ -22,13 +22,13 @@ const Pagination = ({ pageSize, totalCount, currentPage, skip, base }) => {
         disabled={!hasPrevPage}
         onClick={handleNextAndPrev}
         value={`/${base}${prevPage > 1 ? `/${prevPage}` : ''}`}
-        prev
+        title="prev"
       >
-        ← Prev
+        ← <span>Prev</span>
       </S.Button>
       {Array.from({ length: totalPages }, (_, i) => (
         <Link
-          key={i}
+          key={`page-${i}`}
           className={currentPage === 1 && i === 0 ? 'current' : ''}
           to={`/${base}${i > 0 ? `/${i + 1}` : ''}`}
         >
@@ -40,9 +40,9 @@ const Pagination = ({ pageSize, totalCount, currentPage, skip, base }) => {
         disabled={!hasNextPage}
         onClick={handleNextAndPrev}
         value={`/${base}/${nextPage}`}
-        next
+        title="next"
       >
-        Next →
+        <span>Next</span> →
       </S.Button>
     </S.Pagination>
   );
@@ -72,13 +72,24 @@ const S = {
         color: var(--red);
       }
     }
+    a,
+    button {
+      font-size: 2rem;
+      font-size: clamp(1.5rem, 2.7vw, 2rem);
+    }
   `,
   Button: styled.button`
     background: unset;
     color: var(--black);
     box-shadow: unset;
-    border-right: ${({ prev }) => (prev ? '1px solid var(--grey)' : 'unset')};
+    border-right: ${({ title }) =>
+      title === 'prev' ? '1px solid var(--grey)' : 'unset'};
     text-shadow: unset;
+    @media (max-width: 700px) {
+      span {
+        display: none;
+      }
+    }
   `,
 };
 

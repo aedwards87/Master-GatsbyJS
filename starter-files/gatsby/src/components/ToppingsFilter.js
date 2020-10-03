@@ -84,6 +84,8 @@ const S = {
       background: var(--grey);
       text-decoration: none;
       border-radius: 2px;
+      font-size: 2rem;
+      font-size: clamp(1.5rem, 2.7vw, 2rem);
       .count {
         background: white;
         padding: 2px 5px;
@@ -93,6 +95,8 @@ const S = {
       }
       &[aria-current='page'] {
         background: var(--yellow);
+      }
+      @media (max-width: 500px) {
       }
     }
   `,

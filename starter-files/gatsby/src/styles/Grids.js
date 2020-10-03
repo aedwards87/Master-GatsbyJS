@@ -4,7 +4,11 @@ const S = {
   HomePageGrid: styled.div`
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    --columns: 2;
+    grid-template-columns: repeat(var(--columns), minmax(auto, 1fr));
+    @media (max-width: 800px) {
+      --columns: 1;
+    }
   `,
   ItemsGrid: styled.div`
     display: grid;
@@ -18,10 +22,15 @@ const S = {
       font-size: 0;
     }
     p {
-      transform: rotate(-2deg) translateY(-140%);
+      transform: rotate(-2deg) translateY(-10px);
       position: absolute;
       left: 0;
+      top: 0;
+      margin: 0;
       width: 100%;
+      @media (max-width: 400px) {
+        font-size: 1.5rem;
+      }
     }
     .mark {
       display: inline;

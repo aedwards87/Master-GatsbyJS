@@ -6,7 +6,7 @@ const LoadingGrid = ({ count }) => {
   return (
     <S.ItemsGrid>
       {Array.from({ length: count }, (_, i) => (
-        <S.Items key={i}>
+        <S.Items key={`loading-${i}`}>
           <p>
             <span className="mark">loading...</span>
           </p>
@@ -16,7 +16,7 @@ const LoadingGrid = ({ count }) => {
             alt="Loading"
             className="loading"
             width="100%"
-            // height="400"
+            height="180"
           />
         </S.Items>
       ))}

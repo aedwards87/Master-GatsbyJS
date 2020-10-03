@@ -114,7 +114,6 @@ const turnSliceMastersIntoPages = async ({ graphql, actions }) => {
         slug: sliceMaster.slug.current,
       },
     });
-    // console.log(sliceMaster);
   });
   // 3. Figure our how many pages there are based on how many slicemasters there are, and how many per page
   const pageSize = parseInt(process.env.GATSBY_PAGE_SIZE);
