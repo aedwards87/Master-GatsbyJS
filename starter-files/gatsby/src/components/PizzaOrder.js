@@ -22,7 +22,6 @@ const PizzaOrder = ({ order, pizzas, removeFromOrder }) => {
               type="button"
               className="remove"
               title={`Remove ${singleOrder.size} ${pizza.name} from order`}
-              style={{ fontSize: '3rem' }}
               onClick={() => removeFromOrder(i)}
             >
               &times;

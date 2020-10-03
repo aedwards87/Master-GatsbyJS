@@ -61,11 +61,14 @@ const S = {
     .remove {
       background: none;
       color: var(--red);
-      font-style: 3rem;
       position: absolute;
       top: 0;
       right: 0;
       box-shadow: none;
+      padding: 0;
+      margin: 0;
+      line-height: 50%;
+      font-size: 3rem;
     }
     @media (max-width: 400px) {
       grid-template-columns: 1fr;
