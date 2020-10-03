@@ -29,6 +29,12 @@ const S = {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 4rem;
     grid-auto-rows: auto auto 500px;
+    @media (max-width: 735px) {
+      grid-auto-rows: auto auto 250px;
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
   `,
   SinglePizza: styled.div`
     display: grid;

@@ -74,6 +74,9 @@ const S = {
       }
       button {
         margin-top: 0.5rem;
+      }
+      button:last-child {
+        margin-top: 0rem;
         margin-bottom: 2rem;
       }
     }
