@@ -13,7 +13,9 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "@sanity/google-maps-input"
+    "@sanity/google-maps-input",
+    "@sanity/dashboard",
+    "dashboard-widget-netlify"
   ],
   "env": {
     "development": {
@@ -30,6 +32,14 @@
     {
       "name": "part:@sanity/desk-tool/structure",
       "path": "./sideBar.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "src/dashboardConfig.js"
     }
   ]
 }

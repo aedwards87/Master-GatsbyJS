@@ -27,6 +27,7 @@
     }
   },
   "dependencies": {
+    "@sanity/image-url": "^0.140.19",
     "babel-plugin-styled-components": "^1.11.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.63",
