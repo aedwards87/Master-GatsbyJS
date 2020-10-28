@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <S.Footer>
       <p>&copy; Slick's Slices {new Date().getFullYear()} </p>
+      <p>hi</p>
     </S.Footer>
   );
 };
