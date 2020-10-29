@@ -8,7 +8,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint .",
-    "start": "sanity start"
+    "start": "sanity start",
+    "build": "sanity build"
   },
   "keywords": [
     "sanity"
